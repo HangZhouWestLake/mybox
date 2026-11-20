@@ -5,7 +5,7 @@
 #  用法: sudo bash mybox.sh        首次运行进入菜单安装, 之后直接输入 mybox 或 may
 #        mybox show | update | status | self-update | set-url | uninstall
 #        一行安装 (先把下面的 SCRIPT_URL 改成你自己的仓库直链):
-#        bash <(curl -fsSL https://raw.githubusercontent.com/你的用户名/mybox/main/mybox.sh)
+#        bash <(curl -fsSL https://raw.githubusercontent.com/HangZhouWestLake/mybox/main/mybox.sh)
 # ======================================================================
 set -Eeuo pipefail
 trap 'echo -e "\033[31m[错误] 第 ${LINENO} 行失败: ${BASH_COMMAND}\033[0m" >&2' ERR
@@ -26,7 +26,7 @@ SHORTCUT=may                                  # 快捷词: 输入 may 打开菜�
 SHORTCUT_PATH=/usr/local/bin/$SHORTCUT
 # 脚本在 GitHub 上的直链 (用于一行安装和「更新本脚本」)。把 YOUR_USER 改成你的用户名;
 # 也可以在 VPS 上用菜单 10 设置, 或用环境变量 MYBOX_URL 临时覆盖
-SCRIPT_URL="${MYBOX_URL:-https://raw.githubusercontent.com/YOUR_USER/mybox/main/mybox.sh}"
+SCRIPT_URL="${MYBOX_URL:-https://raw.githubusercontent.com/HangZhouWestLake/mybox/main/mybox.sh}"
 URL_FILE=$CONF/script_url
 RUN_USER=mybox
 
